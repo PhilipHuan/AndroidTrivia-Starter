@@ -27,7 +27,8 @@ class TitleFragment : Fragment() {
                 R.layout.fragment_title, container, false)
         // Inflate the layout for this fragment
         binding.playButton.setOnClickListener{view : View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+            view.findNavController()
+                    .navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
         }
         binding.rulesButton.setOnClickListener{view : View ->
             view.findNavController().navigate(R.id.action_titleFragment_to_rulesFragment)
